@@ -7,6 +7,7 @@ import { Article } from 'src/model/Article';
   styleUrls: ['./articles-component.component.css']
 })
 export class ArticlesComponentComponent implements OnInit {
+  cat:String ="Travail";
 titre:String="Les articles du jour";
 listeArticles:Article[]=[
   {titre:'Le championnat du monde',contenu:'Le champion du monde de cette année est .....',auteur:'Med Taher',date:'12/12/2005',categorie:'Sport'},
@@ -15,6 +16,16 @@ listeArticles:Article[]=[
   constructor() { }
 
   ngOnInit(): void {
+  }
+ changeColor1='pink'
+  changeColor(a:Article){
+    let cat:String ="Travail";
+   let index =this.listeArticles.indexOf(a);
+    if(this.listeArticles[index].categorie=="Travail"){
+      this.changeColor1='bleu';
+
+    }return this.changeColor1;
+
   }
 
 }

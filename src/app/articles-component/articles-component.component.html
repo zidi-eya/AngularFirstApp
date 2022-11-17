@@ -12,3 +12,32 @@
     </fieldset>
     </table></form>
     </div>
+----------------------------------------------------
+
+  <div *ngFor="let p of listeArticles">
+  <div *ngIf=" p.categorie !=cat ">
+
+<table>
+
+
+     <tr><td><p>titre:</p></td><td>{{p.titre}}</td></tr>
+     <tr><td><p>contenu:</p></td><td>{{p.contenu}}</td></tr>
+     <tr><td> <p>auteur:</p></td><td>{{p.auteur}}</td></tr>
+     <tr><td> <p>date:</p></td><td> {{p.date}}</td></tr>
+     <tr><td> <p>categorie:</p></td><td> {{p.categorie}}</td></tr>
+    </table>
+  </div>
+</div>
+--------------------------------------
+<div [style.backgroundColor]="changeColor">
+  <div *ngFor="let p of listeArticles" [style.backgroundColor]="changeColor">
+    <table>
+
+    <tr><td><p>titre:</p></td><td>{{p.titre}}</td></tr>
+    <tr><td><p>contenu:</p></td><td>{{p.contenu}}</td></tr>
+    <tr><td> <p>auteur:</p></td><td>{{p.auteur}}</td></tr>
+    <tr><td> <p>date:</p></td><td> {{p.date}}</td></tr>
+    <tr><td> <p>categorie:</p></td><td> {{p.categorie}}</td></tr>
+   </table>
+</div></div>
+
