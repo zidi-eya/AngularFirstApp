@@ -1,11 +1,14 @@
 <p>articles-component works!</p>
 <div *ngFor="let p of listeArticles">
+  <form action="#">
+<table>
+  <fieldset>
+    <legend> <tr> <td>{{p.titre}}</td></tr></legend>
 
-      <p>Titre:</p>{{p.titre}}
-      <p>contenu:</p>{{p.contenu}}
-      <p>auteur:</p>{{p.auteur}}
-     <p>date:</p> {{p.date}}
-     <p>categorie:</p> {{p.categorie}}
-
-
+     <tr><td><p>contenu:</p></td><td>{{p.contenu}}</td></tr>
+     <tr><td> <p>auteur:</p></td><td>{{p.auteur}}</td></tr>
+     <tr><td> <p>date:</p></td><td> {{p.date}}</td></tr>
+     <tr><td> <p>categorie:</p></td><td> {{p.categorie}}</td></tr>
+    </fieldset>
+    </table></form>
     </div>
