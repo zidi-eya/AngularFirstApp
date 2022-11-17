@@ -1,0 +1,33 @@
+<p>offres-emploi-componworks!</p>
+<div>
+  <input type="text"  [(ngModel)]="emploicher">
+</div>
+<div *ngFor="let p of listeEmploi">
+<div *ngIf="p.entreprise==emploicher " >
+    {{p.reference}}
+    {{p.titre}}
+    {{p.entreprise}}
+    {{p.etat}}
+
+    <input type="submit" value="postuler"   [disabled]="p.etat==false">
+  </div>
+</div>
+
+<p>-----------------------------------</p>
+<div *ngFor="let p of listeEmploi">
+
+      {{p.reference}}
+      {{p.titre}}
+      {{p.entreprise}}
+      {{p.etat}}
+
+      <input type="submit" value="postuler"   [disabled]="p.etat==false">
+
+  </div>
+  <!-- <div *ngIf="p.etat==true"> -->
+  <!-- <input type="submit" value="bilan" (click)="calculer">
+  <input type="text" value=""  > -->
+  <!-- </div> -->
+  <!-- [([(ngModel)] -->
+  <!-- <input type="text" value="bilan" {{ngModel()}}="calculer"> -->
+
